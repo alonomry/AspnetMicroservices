@@ -27,7 +27,7 @@ namespace Catalog.API.Controllers
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
-            Console.WriteLine("---> seeding data");
+            Console.WriteLine("---> Controller got GetProduct request");
             var products = await _repository.GetProducts();
             return Ok(products);
         }
